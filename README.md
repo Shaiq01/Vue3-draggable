@@ -21,7 +21,7 @@ npm i vue3-draggable
 # Try Sample
 
 ```bash
-git clone https://github.com/shkilo/vue3-draggable.git
+git clone https://github.com/Shaiq01/Vue3-draggable
 
 npm i
 npm run serve
