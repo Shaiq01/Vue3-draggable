@@ -1,6 +1,6 @@
 {
   "name": "@shaiq0/vue3-draggable",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "private": false,
   "description": "simple drag&drop component for vue 3.x",
   "author": {
@@ -30,11 +30,6 @@
   "peerDependencies": {
     "vue": "^3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
   "bugs": "https://github.com/Shaiq01/Vue3-draggable/issues",
   "keywords": [
     "draggable",
@@ -42,7 +37,8 @@
     "vue",
     "drag",
     "drop",
-    "drag and drop"
+    "drag and drop",
+    "shaiq"
   ],
   "license": "MIT",
   "repository": {
