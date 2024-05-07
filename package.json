@@ -69,5 +69,8 @@
     "drag and drop"
   ],
   "license": "MIT",
-  "repository": "https://github.com/Shaiq01/Vue3-draggable"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaiq01/Vue3-draggable.git"
+  }
 }
