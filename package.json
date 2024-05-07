@@ -4,8 +4,8 @@
   "private": false,
   "description": "simple drag&drop component for vue 3.x",
   "author": {
-    "name": "Kyle Kim",
-    "email": "kyle.hwan.k@gmail.com"
+    "name": "Shaiq Ul Hassan",
+    "email": "Shaiqhassan01@gmail.com"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -59,7 +59,7 @@
     "last 2 versions",
     "not dead"
   ],
-  "bugs": "https://github.com/shkilo/vue3-draggable/issues",
+  "bugs": "https://github.com/Shaiq01/Vue3-draggable/issues",
   "keywords": [
     "draggable",
     "vue3",
@@ -69,5 +69,5 @@
     "drag and drop"
   ],
   "license": "MIT",
-  "repository": "https://github.com/shkilo/vue3-draggable"
+  "repository": "https://github.com/Shaiq01/Vue3-draggable"
 }
