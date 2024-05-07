@@ -1,5 +1,5 @@
 {
-  "name": "vue3draggable",
+  "name": "@shaiq0/vue3-draggable",
   "version": "2.1.0",
   "private": false,
   "description": "simple drag&drop component for vue 3.x",
