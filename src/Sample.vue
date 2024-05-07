@@ -5,7 +5,7 @@
         v-model="items1"
         transition="100"
         class="drop-zone"
-        :draggable="false"
+        :draggable="true"
         >
         <template v-slot:item="{ item }">
           <div class="draggable-item">
