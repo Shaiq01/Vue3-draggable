@@ -7,9 +7,10 @@
         class="drop-zone"
         :draggable="true"
         >
-        <template v-slot:item="{ item }">
+        <template v-slot:item="{ item, index }">
           <div class="draggable-item">
             {{ item.title }}
+            {{ index }}
           </div>
         </template>
       </draggable>

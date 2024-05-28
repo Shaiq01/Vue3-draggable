@@ -11,7 +11,7 @@
         @itemDragOver="onItemDragOver"
         @dragenter.prevent
       >
-        <slot name="item" :item="item.data"></slot>
+        <slot name="item" :item="item.data" :index="index"></slot>
       </draggable-item>
     </transition-group>
   </div>
