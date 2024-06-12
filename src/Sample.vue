@@ -5,12 +5,11 @@
         v-model="items1"
         transition="100"
         class="drop-zone"
-        :draggable="true"
+        :draggable="false"
         >
         <template v-slot:item="{ item, index }">
           <div class="draggable-item">
             {{ item.title }}
-            {{ index }}
           </div>
         </template>
       </draggable>
@@ -48,7 +47,9 @@ export default {
       items1: Array(5)
         .fill({})
         .map((_, index) => ({ title: `Item ${index + 1}` })),
-      items2: []
+      items2: Array(5)
+        .fill({})
+        .map((_, index) => ({ title: `Item ${index + 1}` }))
     };
   }
 };

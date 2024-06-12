@@ -39,13 +39,13 @@ export default {
     }
   },
   setup(props, context) {
-    const { modelValue } = toRefs(props);
+    const { modelValue, draggable } = toRefs(props);
     const {
       id,
       items,
       onDragOver,
       onItemDragOver,
-    } = useDraggableContainer(modelValue, context);
+    } = useDraggableContainer(modelValue, context, draggable);
 
     return { id, items, onDragOver, onItemDragOver };
   },

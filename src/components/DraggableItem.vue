@@ -27,7 +27,7 @@ export default {
     isDraggable: Boolean
   },
   setup(props, context) {
-    const { item, position, containerId } = toRefs(props);
+    const { item, position, containerId, isDraggable } = toRefs(props);
     const {
       draggableItemEl,
       isDragging,
@@ -36,7 +36,7 @@ export default {
       onDragEnd,
       transitionStart,
       transitionEnd
-    } = useDraggableItem(item, position, containerId, context);
+    } = useDraggableItem(item, position, containerId, context, isDraggable);
 
     return {
       draggableItemEl,

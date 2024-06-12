@@ -12,7 +12,8 @@ const containerIdGenerator = getIdGenerator();
 
 const useDraggableContainer = (
   originalItems: Ref<Array<any>>,
-  context: SetupContext
+  context: SetupContext,
+  draggable: Ref<boolean>
 ) => {
   const id = containerIdGenerator();
   const items = ref<Array<DraggableItem>>(
@@ -29,6 +30,9 @@ const useDraggableContainer = (
 
   // case when an item is being dragged to another container
   watch(containerIdCurrentlyDraggedOver, () => {
+    if(!draggable.value){
+      return;
+    }
     if (containerIdCurrentlyDraggedOver.value === id) {
       return;
     }
@@ -63,7 +67,8 @@ const useDraggableContainer = (
     items.value = changeArrayOrder(
       items.value,
       itemCurrentlyDragging.value,
-      position
+      position,
+      draggable
     );
   };
 
@@ -79,12 +84,16 @@ const useDraggableItem = (
   item: Ref<any>,
   position: Ref<number>,
   containerId: Ref<number>,
-  context: SetupContext
+  context: SetupContext,
+  isDraggable: Ref<boolean>
 ) => {
   const draggableItemEl = ref(null);
-  const isDragging = ref(
-    item.value.id === itemCurrentlyDragging.value?.id ? true : false
-  );
+  let isDragging = ref(false);
+  if(isDraggable.value){
+    isDragging = ref(
+      item.value.id === itemCurrentlyDragging.value?.id ? true : false
+    );
+  }
   const middleY = ref(null);
 
   onMounted(async () => {
@@ -98,6 +107,9 @@ const useDraggableItem = (
   });
 
   const onDragStart = () => {
+    if(!isDraggable.value){
+      return;
+    }
     itemCurrentlyDragging.value = item.value;
     containerIdCurrentlyDraggedOver.value = containerId.value;
     isDragging.value = true;
@@ -108,6 +120,9 @@ const useDraggableItem = (
   };
 
   const onDragOver = throttle((e: DragEvent) => {
+    if(!isDraggable.value){
+      return;
+    }
     if (item.value.id === itemCurrentlyDragging.value.id) {
       return;
     }
